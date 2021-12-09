@@ -15,7 +15,7 @@ curl -s https://fluxcd.io/install.sh | sudo bash
 ```
 flux bootstrap github \
   --owner=chandra-zs \
-  --repository=flux2-1 \
+  --repository=flux2 \
   --branch=main \
   --path=./manifests/monitoring
 ```
@@ -24,7 +24,7 @@ flux bootstrap github \
 ```
 flux create source git monitoring \
   --interval=30m \
-  --url=https://github.com/chandra-zs/flux2-1.git \
+  --url=https://github.com/chandra-zs/flux2.git \
   --branch=main
 ```
 # Create Monitoring-Stack Kustomization
